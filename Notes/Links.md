@@ -1,0 +1,5 @@
+- https://crates.io/crates/whisper-rs
+- https://github.com/ggerganov/whisper.cpp/
+- https://crates.io/crates/google-drive
+- https://github.com/openai/whisper
+- https://www.notion.so/product
