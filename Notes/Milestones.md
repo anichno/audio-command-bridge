@@ -1,0 +1,11 @@
+- [ ] User onboard with Google OAuth
+- [ ] Store user token to DB
+- [ ] Request files in target GDrive dir
+- [ ] Move files to "Processed" folder
+- [ ] Request watch of target folder
+- [ ] Request files when notified via watch
+- [ ] Process files to text with whisper
+- [ ] Parse text to either task or note
+- [ ] Basic API with reclaim.ai to add tasks
+- [ ] Basic API to push note to note backend
+- [ ] Based on result of parsed text, send to appropriate target
