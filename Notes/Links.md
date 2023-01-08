@@ -4,3 +4,7 @@
 - https://github.com/openai/whisper
 - https://www.notion.so/product
 - https://tiddlywiki.com/
+- https://developers.google.com/drive/picker/guides/overview
+- https://developers.google.com/drive/api/v3/reference
+- https://developers.google.com/drive/api/guides/about-sdk
+- https://myaccount.google.com/permissions?continue=https%3A%2F%2Fmyaccount.google.com%2Fsecurity
