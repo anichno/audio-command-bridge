@@ -1,5 +1,17 @@
 ## User Onboarding
+```mermaid
+sequenceDiagram
+	participant U as User
+	participant B as Audio Command Bridge
+	participant G as Google Auth
 
+	U ->> B: User requests "/onboard" url
+	B ->> U: Redirect to Google OAuth Consent screen
+	U ->> G: User authorizes access to Google Drive
+	G ->> U: Redirect to "/authorized" url
+	U ->> B: Passes OAuth token to Audio Command Bridge
+	B ->> B: Token is saved in DB for future use
+```
 
 
 ## User Flow
@@ -9,23 +21,13 @@ sequenceDiagram
 	participant A as ASR Voice Recorder
 	participant G as Google Drive
 	participant B as Audio Command Bridge
-	participant R as Reclaim.ai
-	participant N as Notes Backend
+	participant C as Command Processor/Router
 
-	alt Add Task
-		U ->> A: Records Task by starting message with "Add Task"
-	else Add Note
-		U ->> A: Records Note by starting message with "Add Note"
-	end
 
+	U ->> A: Records Command by with ASR Voice Recorder
 	A -) G: Audio clip is uploaded when on wifi
 	G ->> B: Notifies via webhook that recordings folder has new file
 	B ->> G: Download new audio file
 	B ->> B: Whisper converts audio to text
-
-	alt Command Add Task
-		B ->> R: Task added based on user commands
-	else Command Add Note
-		B ->> N: Note added
-	end
+	B ->> C: Text command sent to Command Processor
 ```
