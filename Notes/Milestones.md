@@ -1,5 +1,5 @@
 # Initially Planned
-- [ ] User onboard with Google OAuth
+- [x] User onboard with Google OAuth
 - [ ] Store user token to DB
 - [ ] Allow selection of GDrive folder with GDrive file picker
 - [ ] Request files in target GDrive dir
