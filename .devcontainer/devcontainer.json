@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		1234,
+		"db:5432"
+	],
+	"containerUser": "user",
+	"service": "workspace",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"dockerComposeFile": "docker-compose.devcontainer.yaml",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"usernamehw.errorlens",
+				"bungcip.better-toml",
+				"vadimcn.vscode-lldb",
+				"ryanluker.vscode-coverage-gutters",
+				"serayuzgur.crates",
+				"foam.foam-vscode",
+				"ZainChen.json",
+				"rust-lang.rust-analyzer"
+			]
+		}
+	}
+}
